@@ -50,19 +50,19 @@ void GaugeCar::paintEvent(QPaintEvent *event)
     painter.translate(width / 2, height / 2);
     painter.scale(side / 200.0, side / 200.0);
 
-    //绘制外圆
+    //缁樺埗澶栧渾
     drawOuterCircle(&painter);
-    //绘制内圆
+    //缁樺埗鍐呭渾
     drawInnerCircle(&painter);
-    //绘制饼圆
+    //缁樺埗楗煎渾
     drawPie(&painter);
-    //绘制覆盖圆用以遮住饼圆多余部分
+    //缁樺埗瑕嗙洊鍦嗙敤浠ラ伄浣忛ゼ鍦嗗¤氫綑閮ㄥ垎
     drawCoverCircle(&painter);
-    //绘制刻度线
+    //缁樺埗鍒诲害绾¿
     drawScale(&painter);
-    //绘制刻度值
+    //缁樺埗鍒诲害鍊¼
     drawScaleNum(&painter);
-    //根据指针样式进行绘制指针
+    //鏍规嵁鎸囬拡鏍峰紡杩涜¡岀粯鍒舵寚閽
     if(pointerStyle == PointerStyle::PointerStyle_Circle){
         drawPointerCircle(&painter);
     }
@@ -75,13 +75,13 @@ void GaugeCar::paintEvent(QPaintEvent *event)
     else if (pointerStyle == PointerStyle::PointerStyle_IndicatorR) {
         drawPointerIndicatorR(&painter);
     }
-    //绘制指针中心圆外边框
+    //缁樺埗鎸囬拡涓­蹇冨渾澶栬竟妗
     drawRoundCircle(&painter);
-    //绘制指针中心圆
+    //缁樺埗鎸囬拡涓­蹇冨渾
     drawCenterCircle(&painter);
-    //绘制当前值
+    //缁樺埗褰撳墠鍊¼
     drawValue(&painter);
-    //绘制遮罩层
+    //缁樺埗閬®缃╁眰
     drawOverlay(&painter);
     update();
 }
@@ -125,13 +125,13 @@ void GaugeCar::drawPie(QPainter *painter){
         double angleEnd = angleAll * 0.15;
 
         int offset = 3;
-        //绘制开始饼圆
+        //缁樺埗寮€濮嬮ゼ鍦
         painter->setBrush(pieColorStart);
         painter->drawPie(rect, (270 - startAngle - angleStart) * 16, angleStart * 16);
-        //绘制中间饼圆
+        //缁樺埗涓­闂撮ゼ鍦
         painter->setBrush(pieColorMid);
         painter->drawPie(rect, (270 - startAngle - angleStart - angleMid) * 16 + offset, angleMid * 16);
-        //绘制结束饼圆
+        //缁樺埗缁撴潫楗煎渾
         painter->setBrush(pieColorEnd);
         painter->drawPie(rect, (270 - startAngle - angleStart - angleMid - angleEnd) * 16 + offset * 2, angleEnd * 16);
 
@@ -141,10 +141,10 @@ void GaugeCar::drawPie(QPainter *painter){
         double angleCurrent = angleAll * ((currentValue - minValue) / (maxValue - minValue));
         double angleOther = angleAll - angleCurrent;
 
-        //绘制当前值饼圆
+        //缁樺埗褰撳墠鍊奸ゼ鍦
         painter->setBrush(pieColorStart);
         painter->drawPie(rect, (270 - startAngle - angleCurrent) * 16, angleCurrent * 16);
-        //绘制剩余值饼圆
+        //缁樺埗鍓╀綑鍊奸ゼ鍦
         painter->setBrush(pieColorEnd);
         painter->drawPie(rect, (270 - startAngle - angleCurrent - angleOther) * 16, angleOther * 16);
     }
@@ -257,7 +257,7 @@ void GaugeCar::drawPointerIndicatorR(QPainter *painter){
     painter->rotate(degRotate);
     painter->drawConvexPolygon(pts);
 
-    //增加绘制圆角直线 与之前的三角形重叠， 形成圆角指针
+    //澧炲姞缁樺埗鍦嗚§掔洿绾¿ 涓庝箣鍓嶇殑涓夎§掑舰閲嶅彔锛 褰㈡垚鍦嗚§掓寚閽
     pen.setCapStyle(Qt::RoundCap);
     pen.setWidthF(4);
     painter->setPen(pen);
@@ -328,7 +328,7 @@ void GaugeCar::drawOverlay(QPainter *painter){
     painter->setPen(Qt::NoPen);
 
     QPainterPath smallCircle, bigCircle;
-    radius -= 1;
+    radius = 1;
     smallCircle.addEllipse(-radius, -radius, radius * 2, radius * 2);
     radius *= 2;
     bigCircle.addEllipse(-radius, -radius + 140, radius * 2, radius * 2);

@@ -10,40 +10,40 @@ class GaugeCar : public QWidget
     Q_OBJECT
     Q_ENUMS(PieStyle)
     Q_ENUMS(PointerStyle)
-    // 最小值
-    Q_PROPERTY(double minValue READ getMinValue WRITE setMinValue)// 最小值
-    Q_PROPERTY(double maxValue READ getMaxValue WRITE setMaxValue)// 最大值
-    Q_PROPERTY(double value READ getValue WRITE setValue)// 设置目标值
-    Q_PROPERTY(int precision READ getPrecision WRITE setPrecision)// 设置精确度
+    // 鏈€灏忓€¼
+    Q_PROPERTY(double minValue READ getMinValue WRITE setMinValue)// 鏈€灏忓€¼
+    Q_PROPERTY(double maxValue READ getMaxValue WRITE setMaxValue)// 鏈€澶у€¼
+    Q_PROPERTY(double value READ getValue WRITE setValue)// 璁剧疆鐩®鏍囧€¼
+    Q_PROPERTY(int precision READ getPrecision WRITE setPrecision)// 璁剧疆绮剧‘搴¦
 
 
-    Q_PROPERTY(int scaleMajor READ getScaleMajor WRITE setScaleMajor)//设置主刻度数量
-    Q_PROPERTY(int scaleMinor READ getScaleMinor WRITE setScaleMinor)//设置小刻度数量
-    Q_PROPERTY(int sartAngle READ getSartAngle WRITE setSartAngle)//设置开始旋转角度
-    Q_PROPERTY(int endAngle READ geEndAngle WRITE setEndAngle)//设置结束旋转角度
+    Q_PROPERTY(int scaleMajor READ getScaleMajor WRITE setScaleMajor)//璁剧疆涓诲埢搴︽暟閲
+    Q_PROPERTY(int scaleMinor READ getScaleMinor WRITE setScaleMinor)//璁剧疆灏忓埢搴︽暟閲
+    Q_PROPERTY(int sartAngle READ getSartAngle WRITE setSartAngle)//璁剧疆寮€濮嬫棆杞¬瑙掑害
+    Q_PROPERTY(int endAngle READ geEndAngle WRITE setEndAngle)//璁剧疆缁撴潫鏃嬭浆瑙掑害
 
 
-    Q_PROPERTY(bool animation READ getAnimation WRITE setAnimation)//设置是否启用动画显示
-    Q_PROPERTY(double animationStep READ getAnimationStep WRITE setAnimationStep)//设置动画显示的步长
+    Q_PROPERTY(bool animation READ getAnimation WRITE setAnimation)//璁剧疆鏄¯鍚﹀惎鐢ㄥ姩鐢绘樉绀º
+    Q_PROPERTY(double animationStep READ getAnimationStep WRITE setAnimationStep)//璁剧疆鍔ㄧ敾鏄剧ず鐨勬­ラ暱
 
-    Q_PROPERTY(QColor outerCircleColor READ getOuterCircleColor WRITE setOuterCircleColor)//设置外圆背景颜色
+    Q_PROPERTY(QColor outerCircleColor READ getOuterCircleColor WRITE setOuterCircleColor)//璁剧疆澶栧渾鑳屾櫙棰滆壊
     Q_PROPERTY(QColor innerCircleColor READ getInnerCircleColor WRITE setInnerCircleColor)
-    //设置饼圆的三种颜色
+    //璁剧疆楗煎渾鐨勪笁绉嶉¢滆壊
     Q_PROPERTY(QColor pieColorStart READ getPieColorStart WRITE setPieColorStart)
     Q_PROPERTY(QColor pieColorMid READ getPieColorMid WRITE setPieColorMid)
     Q_PROPERTY(QColor pieColorEnd READ getPieColorEnd WRITE setPieColorEnd)
 
-    Q_PROPERTY(QColor coverCircleColor READ getCoverCircleColor WRITE setCoverCircleColor)//设置覆盖圆背景颜色
-    Q_PROPERTY(QColor scaleColor READ getScaleColor WRITE setScaleColor)//设置刻度尺颜色
-    Q_PROPERTY(QColor pointerColor READ getPointerColor WRITE setPointerColor)//设置指针颜色
-    Q_PROPERTY(QColor centerCircleColor READ getCenterCircleColor WRITE setCenterCircleColor)//设置中心圆样式
-    Q_PROPERTY(QColor textColor READ getTextColor WRITE setTextColor)//设置文本颜色
+    Q_PROPERTY(QColor coverCircleColor READ getCoverCircleColor WRITE setCoverCircleColor)//璁剧疆瑕嗙洊鍦嗚儗鏅¯棰滆壊
+    Q_PROPERTY(QColor scaleColor READ getScaleColor WRITE setScaleColor)//璁剧疆鍒诲害灏洪¢滆壊
+    Q_PROPERTY(QColor pointerColor READ getPointerColor WRITE setPointerColor)//璁剧疆鎸囬拡棰滆壊
+    Q_PROPERTY(QColor centerCircleColor READ getCenterCircleColor WRITE setCenterCircleColor)//璁剧疆涓­蹇冨渾鏍峰紡
+    Q_PROPERTY(QColor textColor READ getTextColor WRITE setTextColor)//璁剧疆鏂囨湰棰滆壊
 
-    Q_PROPERTY(bool showOverlay READ getShowOverlay WRITE setShowOverlay)//是否显示遮罩层
-    Q_PROPERTY(QColor overlayColor READ getOverlayColor WRITE setOverlayColor)//遮罩层颜色
+    Q_PROPERTY(bool showOverlay READ getShowOverlay WRITE setShowOverlay)//鏄¯鍚︽樉绀洪伄缃╁眰
+    Q_PROPERTY(QColor overlayColor READ getOverlayColor WRITE setOverlayColor)//閬®缃╁眰棰滆壊
 
-    Q_PROPERTY(PieStyle pieStyle READ getPieStyle WRITE setPieStyle)//饼图样式
-    Q_PROPERTY(PointerStyle pointerStyle READ getPointerStyle WRITE setPointerStyle)// 指针样式
+    Q_PROPERTY(PieStyle pieStyle READ getPieStyle WRITE setPieStyle)//楗煎浘鏍峰紡
+    Q_PROPERTY(PointerStyle pointerStyle READ getPointerStyle WRITE setPointerStyle)// 鎸囬拡鏍峰紡
 
 
 public:
@@ -197,3 +197,4 @@ public Q_SLOTS:
 };
 
 #endif // GAUGECAR_H
+

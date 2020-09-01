@@ -13,8 +13,8 @@ Widget::~Widget()
     delete ui;
 }
 
-
 void Widget::on_horizontalSlider_valueChanged(int value)
 {
     ui->widget->setValue(value);
 }
+

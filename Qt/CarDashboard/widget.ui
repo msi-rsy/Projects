@@ -6,29 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>665</width>
-    <height>696</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <widget class="GaugeCar" name="widget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>30</y>
-     <width>600</width>
-     <height>600</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QSlider" name="horizontalSlider">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>650</y>
-     <width>481</width>
+     <x>100</x>
+     <y>530</y>
+     <width>621</width>
      <height>22</height>
     </rect>
    </property>
@@ -37,6 +27,16 @@
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="GaugeCar" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>130</y>
+     <width>361</width>
+     <height>301</height>
+    </rect>
    </property>
   </widget>
  </widget>
